@@ -1,6 +1,6 @@
 package com.example.myapplication.Kotlin
 
-// 18. Class
+// 18. Class (코틀린 전체에서 가장 중요!!)
 // OOP -> Object Oriented Programming (객체지향 프로그래밍)
 
 // 객체란 뭘까?

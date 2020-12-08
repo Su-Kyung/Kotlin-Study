@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!--    플러그인 설치 : Shift + Shift-->
+<!--    Android Drawable Import 플러그인: 알아서 해상도에 따른 이미지 만들어줌
+        res -> drawable -> 우클릭 -> New -> Batch Drawable Import-->
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/ic_launcher_foreground" />
+
+<!--    scaleType : 보통 centerCrop 을 많이 사용-->
+<!--    사실 디자이너가 알아서 맞추어서 준다-->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="#00BCD4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/___" />
+
+</LinearLayout>

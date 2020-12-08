@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <gradient
+        android:angle="180"
+        android:centerColor="#9C27B0"
+        android:endColor="#2196F3"
+        android:startColor="#FFC107" />
+
+</shape>
+
+<!--디자이너에게 컬러 받아서 직접 만들어 사용하는 것이 좋다-->

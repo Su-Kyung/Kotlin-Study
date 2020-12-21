@@ -14,7 +14,7 @@
         android:background="#3F51B5"
         android:textSize="40dp"
         android:textColor="#ffffff"
-        android:gravity="right"
+        android:gravity="right|center_vertical"
         android:padding="15dp"
         android:text="0"/>
 
@@ -24,7 +24,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#009688"
@@ -33,7 +33,7 @@
             <TextView
                 android:id="@+id/btn1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:textColor="#ffffff"
                 android:text="1"
                 android:gravity="center"
@@ -43,7 +43,7 @@
             <TextView
                 android:id="@+id/btn4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:textColor="#ffffff"
                 android:text="4"
                 android:gravity="center"
@@ -53,7 +53,7 @@
             <TextView
                 android:id="@+id/btn7"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:textColor="#FFFFFF"
                 android:text="7"
                 android:gravity="center"
@@ -63,7 +63,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#009688"
@@ -72,7 +72,7 @@
             <TextView
                 android:id="@+id/btn2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:textColor="#ffffff"
                 android:text="2"
                 android:gravity="center"
@@ -82,7 +82,7 @@
             <TextView
                 android:id="@+id/btn5"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:textColor="#ffffff"
                 android:text="5"
                 android:gravity="center"
@@ -92,7 +92,7 @@
             <TextView
                 android:id="@+id/btn8"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:textColor="#FFFFFF"
                 android:text="8"
                 android:gravity="center"
@@ -102,7 +102,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#009688"
@@ -111,7 +111,7 @@
             <TextView
                 android:id="@+id/btn3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:textColor="#ffffff"
                 android:text="3"
                 android:gravity="center"
@@ -121,7 +121,7 @@
             <TextView
                 android:id="@+id/btn6"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:textColor="#ffffff"
                 android:text="6"
                 android:gravity="center"
@@ -131,7 +131,7 @@
             <TextView
                 android:id="@+id/btn9"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:textColor="#FFFFFF"
                 android:text="9"
                 android:gravity="center"
@@ -141,7 +141,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -149,7 +149,7 @@
             <TextView
                 android:id="@+id/btnReset"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:textColor="#ffffff"
                 android:background="#F44336"
                 android:text="CA"
@@ -160,7 +160,7 @@
             <TextView
                 android:id="@+id/btnAdd"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:textColor="#ffffff"
                 android:background="#F44336"
                 android:text="+"
@@ -171,7 +171,7 @@
             <TextView
                 android:id="@+id/btn0"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:textColor="#000000"
                 android:background="#FFFFFF"
                 android:text="0"

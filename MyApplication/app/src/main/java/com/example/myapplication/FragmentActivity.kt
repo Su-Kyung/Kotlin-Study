@@ -6,12 +6,8 @@ import android.util.Log
 import androidx.fragment.app.FragmentManager
 import kotlinx.android.synthetic.main.activity_fragment.*
 
-class FragmentActivity : AppCompatActivity(), FragmentOne.OnDataPassListener {
-
-    // 인터페이스의 함수 구현
-    override fun onDataPass(data: String?) {
-        Log.d("pass",""+data)
-    }
+// TabLayout, Pager 실습하면서 필요 없는 부분이 오류 발생해서 지움
+class FragmentActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

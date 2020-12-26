@@ -1,0 +1,69 @@
+네트워크
+-> 통신
+
+Database <----> Server <----> Client(app, web, ...)
+   글                            A
+   댓글                          B
+
+Local Database 의 한계
+- 동기화가 어렵다
+- 상호작용이 불가능하다
+
+서버와 통신하는 방법
+- 해당 url 로 요청한다
+- 인증정보를 보낸다
+- JSON 형식을 사용해서 data 를 보낸다
+- JavaScript Object Notation -> Javascript 에서 객체를 만들 때 사용하는 표현식
+
+JSON 형식
+- [] -> List
+- {} -> 객체
+    > "" : 문자열
+    > "" 없으면 : 숫자
+
+ex.
+[
+    {
+        "id": 1,                        -> 필드의 의미와 타입은 문서에 써있다 (서버 개발자들로부터 전달)
+        "name": "홍길동",
+        "age": 20,
+        "intro": "나는 홍길동이다!"
+    },
+    {
+        "id": 2,
+        "name": "김아무개",
+        "age": 10,
+        "intro": "난 김아무개 입니다 :)"
+    }
+]
+
+
+JSON Parsing
+-> Json 을 코틀린이나 자바가 이해할 수 있게 변형하는 과정
+
+Serializable (직렬화)
+-> 자바 시스템 내부에서 사용되는 object 를 외부에서 사용할 수 있도록 byte 형태로 데이터를 바꾸는 것
+
+ex. 꼬치에 꽂혀있는 정보를 생성자에 넣어준다고 생각하면 수월함
+---------------------------->
+    id, name, age, intro
+
+코틀린이나 자바가 이해할 수 있는 틀
+class Person(
+    var id : Int? = null
+    var name : String? = null
+    var age : Int? = null
+    var intro : String? = null
+)
+
+Person(1, "김아무개", 20, "안녕하세요")
+
+
+Request Type                  HTTP STATUS CODE
+- GET    -> 정보 요청       -> 200 OK
+- POST   -> 정보 추가 요청   -> 201 Created
+- DELETE -> 정보 삭제 요청
+- PUT    -> 정보 수정 요청
+
+Status Code
+- 200번대 : 보통 처리가 잘 된 것 (서버가 응답함)

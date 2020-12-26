@@ -1,9 +1,7 @@
 package com.example.myapplication
 
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 // Retrofit 설명서에 따른다 (제작자가 interface 로 만들으라고 설명함)
 interface RetrofitService {
@@ -15,9 +13,17 @@ interface RetrofitService {
     fun CreateStudents(
         @Body params: HashMap<String, Any>  // Key, Value(타입 고정 X)
     ): Call<PersonFromServer>
-    
+
     @POST("json/students/")
     fun CreateStudentEasy(
         @Body person: PersonFromServer  // 해시가 아닌 객체를 넣어줌 -> 좀 더 간편하다
     ): Call<PersonFromServer>
+
+    @FormUrlEncoded
+    @POST("user/signup/")   // 이 API 요청
+    fun register(
+        @Field("username") username: String,
+        @Field("password1") password1: String,
+        @Field("password2") password2: String
+    ): Call<User>   // 그에 대한 응답
 }

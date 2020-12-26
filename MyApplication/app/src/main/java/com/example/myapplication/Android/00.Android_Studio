@@ -1,0 +1,99 @@
+ AndroidManifest.xml 에서
+
+ 패키지명: 고유해야 함
+
+ allowBackup: 앱이 종료되어도 저장 가능
+ icon: 앱의 아이콘
+ roundIcon: 앱의 아이콘 둥글게 그릴 때
+ label: 앱 이름
+ supportsRtl: 오른쪽부터 글을 읽는 것 지원 (Right to Left)
+ theme: 앱의 기본 값들 모아둔 테마
+ activity: 안드로이드에서의 화면
+ LAUNCHER activity: 시작 시 실행되는 activity 로 설정
+
+
+ Gradle
+ -> gradle 언어
+ project: 이 프로젝트 자체
+ app: 앱마다 (하나의 프로젝트에 다수의 앱 생성 가능)
+
+ 예시
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    compileSdkVersion 29    // 이 기준으로 컴파일 하겠다
+    // ex) BuildToolsVersion "20.0.2"
+
+    defaultConfig {
+        applicationId "com.example.myapplication"
+        minSdkVersion 23
+        targetSdkVersion 29
+        minSdkVersion 23    // 설치 최소 버전
+        targetSdkVersion 29 // = compileSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+
+
+ 예시
+buildscript {
+    ext.kotlin_version = "1.3.72"
+    ext.kotlin_version = "1.3.72" // 코틀린의 버전
+    repositories {
+        // 외부의 라이브러리를 아래 두 저장소에서 가져온다
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.0.1"
+        dependencies {  // 의존성
+            classpath "com.android.tools.build:gradle:4.0.1"    // gradle 버전 (gradle: 라이브러리 관리, 기계어로 번역)
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+
+
+ 1: Project
+ 폴더 구조 보는 방식 변경
+ - Android: 보기 좋다
+ - Project: 실제 구조
+
+ Alt + 숫자
+ 탭 왼쪽 숫자 기준으로 열었다가 닫았다가 쉽게 할 수 있다.
+ ex) Alt+1 : 프로젝트 탭
+
+ 상단 탭 드롭박스
+ 무엇을 실행(run)할지, 어떤 기기로 포팅할지
+
+ 디버그 버튼
+ 코드에서 빨간 점 찍은 곳에서 멈춘다
+
+ Sync Project with Gradle Files 버튼
+ 그래들 파일 싱크 다시한다
+
+ git 관련 버튼도 존재
+
+ 돋보기 형태의 버튼
+ 파일을 찾을 때 사용 = Shift + Shift
+ 엔터 -> 그 파일로 이동
+
+ 전체를 대상으로 글자 검색 (키워드 검색)
+ Ctrl + Shift + F
+
+ xml 파일에서 보기 방식 변경
+ - portrait, landscape
+ - pixel
+ - sdk 버전
+ - view mode: 창 따로 빼내기 가능
+
+ preferences = 환경설정
+ - Appearance & Behavior - Appearance : 테마 설정
+ - Keymap - Reformat Code 많이 사용함!
+ - Editor - Font : 되도록 바꾸지 않는 것 추천
+ - Editor - Color schema : 코드의 color 바꾸어준다 (내가 원하는대로 커스텀 가능)
+ - Editor - Code Style : 되도록 바꾸지 않는 것 추천, reformat 시에 영향
+
+ 나의 커스텀 설정값 내보내기
+ File 탭 - Export Settings -> File - Import Settings
+
+ 우측 아래 : 램 사용량 (느리면 클릭해서 정리하거나 껐다가 키자)

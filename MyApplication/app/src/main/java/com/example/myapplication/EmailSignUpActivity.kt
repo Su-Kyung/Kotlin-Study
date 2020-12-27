@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.service.voice.VoiceInteractionSession
@@ -35,16 +36,17 @@ class EmailSignUpActivity : AppCompatActivity() {
             register(this@EmailSignUpActivity)
         }
         loginBtn.setOnClickListener {
-            val sp = activity.getSharedPreferences("login_sp", Context.MODE_PRIVATE)
-            val token = sp.getString("login_sp", "")
-            Log.d("abcc", "token : " + token)
+            // 로그인 액티비티로 보낸다
+            startActivity(
+                Intent(this@EmailSignUpActivity, LoginActivity::class.java)
+            )
         }
     }
 
     fun register(activity: Activity) {
-        val username = usernameView.text.toString()
-        val password1 = userPassword1View.text.toString()
-        val password2 = userPassword2View.text.toString()
+        val username = getUserName()
+        val password1 = getUserPassword1()
+        val password2 = getUserPassword2()
 
         // MasterApplication 에서 retrofit 으로 만든 결과물인 service 를 가져온다
         (application as MasterApplication).service.register(
@@ -60,6 +62,7 @@ class EmailSignUpActivity : AppCompatActivity() {
                     var user = response.body()
                     var token = user!!.token!!  // !! 좋은 습관 아니다
                     saveUserToken(token, activity)
+                    (application as MasterApplication).createRetrofit() // retrofit 호출 다시해준다
                 }
             }
         })

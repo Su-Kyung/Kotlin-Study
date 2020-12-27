@@ -26,4 +26,11 @@ interface RetrofitService {
         @Field("password1") password1: String,
         @Field("password2") password2: String
     ): Call<User>   // 그에 대한 응답
+
+    @FormUrlEncoded
+    @POST("user/login/")
+    fun login(
+        @Field("username") username: String,
+        @Field("password") password: String
+    ): Call<User>
 }
